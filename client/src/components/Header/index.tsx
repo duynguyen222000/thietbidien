@@ -1,7 +1,14 @@
 import React from "react";
+import HeaderTop from "./HeaderTop";
+import HeaderCenter from "./HeaderCenter";
 
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <header>
+      <HeaderTop />
+      <HeaderCenter />
+    </header>
+  );
 };
 
 export default Header;

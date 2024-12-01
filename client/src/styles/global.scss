@@ -1,1 +1,13 @@
-@use "./variables/index.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./variables/index.scss";
+@import "./ultils/index.scss";
+@import "./responsive.scss";
+@import "./components/index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}

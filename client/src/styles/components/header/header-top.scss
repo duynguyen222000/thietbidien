@@ -1,0 +1,18 @@
+.header-top {
+  @apply hidden md:block bg-bgSecond;
+  .layout {
+    @apply flex items-center justify-between py-2;
+    .contact {
+      @apply flex items-center gap-4;
+      .phone,
+      .authen {
+        @apply flex items-center gap-1;
+        a {
+          &:hover {
+            color: var(--global-palette3);
+          }
+        }
+      }
+    }
+  }
+}
