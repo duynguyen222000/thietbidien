@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { BsTelephone, BsPerson } from "react-icons/bs";
 const HeaderTop = () => {

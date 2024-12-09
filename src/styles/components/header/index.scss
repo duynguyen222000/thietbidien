@@ -1,7 +1,4 @@
 header {
-  * {
-    color: var(--global-palette4);
-  }
   @import "./header-top.scss";
   @import "./header-center.scss";
   @import "./header-bottom.scss";

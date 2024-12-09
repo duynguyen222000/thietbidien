@@ -1,5 +1,49 @@
 .header-center {
-  .hambuger-category {
+  .bs-icon {
     @apply text-h2;
+  }
+  .layout {
+    @apply flex items-center justify-between py-8;
+    &-left {
+      @apply flex items-center;
+      gap: var(--spacing-large);
+    }
+    &-center {
+      width: 100%;
+      .search-layout {
+        @apply flex justify-center w-full;
+        .search-box {
+          border: 1px solid var(--global-palette1);
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem 0 0 0.5rem;
+          width: 100%;
+          max-width: 60%;
+          font-size: var(--font-size-body);
+          &:focus-visible {
+            outline: none;
+          }
+        }
+        .btn-search {
+          background: var(--global-palette1);
+          color: var(--global-palette2);
+          padding-inline: 1rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          text-transform: uppercase;
+          font-weight: 600;
+          &:hover {
+          }
+          &:active {
+          }
+        }
+      }
+    }
+    &-right {
+      @apply flex items-center;
+      .hambuger-nav {
+        @include min-sm {
+          display: none;
+        }
+      }
+    }
   }
 }
