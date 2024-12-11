@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { BsCart2 } from "react-icons/bs";
-import { BsList } from "react-icons/bs";
 import ToggleCategory from "../ToggleCategory";
+import ToggleNavbar from "../ToggleNavbar";
 
 const HeaderCenter = () => {
   return (
@@ -25,15 +25,13 @@ const HeaderCenter = () => {
               <input
                 type="text"
                 className="search-box"
-                placeholder="Search product..."
+                placeholder="Tìm sản phẩm..."
               />
-              <button className="btn-search">Search</button>
+              <button className="btn-search">Tìm kiếm</button>
             </div>
           </div>
           <div className="layout-right">
-            <div className="hambuger-nav bs-icon">
-              <BsList />
-            </div>
+            <ToggleNavbar />
             <div className="logo-cart bs-icon">
               <BsCart2 />
             </div>

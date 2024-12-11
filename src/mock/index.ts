@@ -77,3 +77,25 @@ export const category_list = [
     ],
   },
 ];
+export const navbarlist = [
+  {
+    id: 1,
+    name: "Trang chủ",
+  },
+  {
+    id: 2,
+    name: "Sản phẩm",
+  },
+  {
+    id: 3,
+    name: "Tin tức",
+  },
+  {
+    id: 4,
+    name: "Liên hệ",
+  },
+  {
+    id: 5,
+    name: "Về chúng tôi",
+  },
+];

@@ -1,62 +1,35 @@
 .toggle-category {
   .hamburger-category {
-    cursor: pointer;
-    &:active {
-      scale: 0.9;
-    }
+    @apply cursor-pointer active:scale-90;
   }
 
   .category {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100svh;
-    width: 100%;
-    max-width: 400px;
-    background: var(--global-palette2);
-    z-index: 2;
-    visibility: hidden;
-    opacity: 0;
+    @apply fixed top-0 -left-full h-svh w-full max-w-xs z-40 invisible bg-bgLight opacity-0;
     transition: all 0.4s ease;
-
     .category-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
+      @apply flex items-center justify-between p-4;
       h2 {
-        font-size: 1.5rem;
+        @apply text-h2;
       }
       button:hover {
-        scale: 1.1;
+        @apply scale-110;
       }
     }
     &.enter {
-      left: 0;
-      visibility: visible;
-      opacity: 1;
+      @apply left-0 visible opacity-100;
     }
 
     &.exit {
-      left: -100%;
-      opacity: 0;
+      @apply -left-full opacity-0;
     }
     .category-content {
-      padding: 1rem;
-      overflow-y: scroll;
-      height: 95svh;
+      @apply p-4 overflow-y-scroll h-[95svh];
       &-item {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        @apply flex flex-col w-full;
         .item {
-          display: flex;
-          align-items: center;
-
+          @apply flex items-center;
           .item-content {
-            flex-grow: 1;
-            font-size: 1.125rem;
-            padding-block: 1rem;
+            @apply flex-grow text-h3 py-4;
           }
         }
         .sub-category {
@@ -68,28 +41,18 @@
             transition: max-height 1s ease;
           }
           &-item {
-            display: flex;
-            align-items: center;
-            margin-left: 1rem;
+            @apply flex items-center ml-4;
             .item-content {
-              flex-grow: 1;
-              padding-block: 1rem;
-              &:hover {
-                padding-left: 0.5rem;
-              }
+              @apply flex-grow py-4 hover:pl-2;
             }
           }
         }
 
         .icon-toggle-sub {
-          cursor: pointer;
-          padding: 0.5rem;
-          font-size: 1.125rem;
+          @apply cursor-pointer p-2 text-h3 hover:scale-125;
           transform: rotateX(0deg);
           transition: 0.5s ease;
-          &:hover {
-            scale: 1.2;
-          }
+
           &.active {
             transform: rotateX(180deg);
           }
@@ -99,13 +62,8 @@
   }
 
   .toggle-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @apply fixed top-0 left-0 right-0 bottom-0 opacity-0 z-30;
     background: rgba(0, 0, 0, 0.2);
-    opacity: 0;
     transition: opacity 0.2s linear;
     &.enter {
       opacity: 1;

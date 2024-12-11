@@ -1,2 +1,102 @@
 .header-navbar {
+  @apply bg-bgOrange;
+  .layout {
+    @apply flex items-center gap-[10%];
+    .btn-category-navbar {
+      @apply relative  items-center gap-4 uppercase font-medium text-h3 bg-bgLight px-2 py-3 rounded-md hidden xl:flex;
+      &:hover {
+        .category-navbar {
+          @apply block;
+        }
+      }
+      .category-navbar {
+        @apply bg-lightDark absolute w-full top-[100%] left-0 py-4 hidden;
+        box-shadow: 0px 4px 10px -2px var(--global-palette3);
+        &-item {
+          @apply relative;
+          &:hover {
+            &::after {
+              @apply w-4/5;
+              transition: 0.5s ease;
+            }
+          }
+          &::after {
+            @apply content-[''] absolute w-0 h-1 bottom-0 left-1/2 -translate-x-1/2 bg-bgOrange;
+          }
+          .item {
+            @apply flex items-center justify-between;
+            a {
+              @apply block flex-grow py-4;
+            }
+            &:hover {
+              .icon-toggle-sub {
+                @apply translate-y-0;
+              }
+            }
+            .icon-toggle-sub {
+              @apply -translate-y-3;
+              rotate: 270deg;
+            }
+          }
+          &:hover {
+            .sub-category-navbar {
+              @apply visible max-h-96;
+              transition: 1s ease;
+            }
+          }
+          .sub-category-navbar {
+            @apply bg-lightDark absolute left-full top-0 w-full z-20 invisible max-h-0 overflow-hidden;
+            box-shadow: 0px 0px 6px -1px black;
+
+            li {
+              a {
+                @apply block p-4 hover:bg-bgLight;
+              }
+            }
+          }
+        }
+      }
+    }
+    .navbar {
+      @apply hidden  grow items-center  h-full py-1 gap-[2%] md:justify-center md:flex;
+      .navbar-item {
+        @apply h-full relative overflow-hidden p-[0.125rem];
+        transition: 1s ease;
+
+        &::before {
+          @apply content-[''] absolute w-0 h-0 bg-bgLight bottom-0 left-0 rounded-tr-full;
+          transition: 0.5s ease;
+        }
+        &::after {
+          @apply content-[''] absolute w-0 h-0 bg-bgLight top-0 right-0 rounded-bl-full;
+          transition: 0.5s ease;
+        }
+        &:hover {
+          &::before,
+          &::after {
+            @apply w-52  h-20;
+            transition: 1s ease;
+          }
+        }
+
+        .item {
+          border: 4px solid transparent;
+          @apply block p-2 text-lg  uppercase text-bgLight font-medium relative z-10 bg-bgOrange;
+          &.active {
+            border-bottom: 4px solid var(--global-palette2);
+          }
+        }
+      }
+    }
+    .search-box {
+      @apply my-4 w-full relative md:hidden;
+
+      input {
+        @apply py-3 px-4 w-full rounded-[2rem] focus-visible:outline-none;
+      }
+      .btn-search {
+        @apply bg-lightDark absolute top-[0.0625rem] right-[0.0625rem] text-large p-2 rounded-full;
+      }
+    }
+  }
 }
