@@ -99,3 +99,56 @@ export const navbarlist = [
     name: "Về chúng tôi",
   },
 ];
+export const menuFooter = [
+  {
+    name: "Menu 1",
+    subMenu: [
+      {
+        name: "Menu item 1.1",
+        link: "/",
+      },
+      {
+        name: "Menu item 1.2",
+        link: "/",
+      },
+      {
+        name: "Menu item 1.3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    name: "Menu 2",
+    subMenu: [
+      {
+        name: "Menu item 2.1",
+        link: "/",
+      },
+      {
+        name: "Menu item 2.2",
+        link: "/",
+      },
+      {
+        name: "Menu item 2.3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    name: "Menu 3",
+    subMenu: [
+      {
+        name: "Menu item 3.1",
+        link: "/",
+      },
+      {
+        name: "Menu item 3.2",
+        link: "/",
+      },
+      {
+        name: "Menu item 3.3",
+        link: "/",
+      },
+    ],
+  },
+];

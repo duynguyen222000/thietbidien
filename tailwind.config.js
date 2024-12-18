@@ -55,6 +55,7 @@ module.exports = {
         h2: "28px",
         h3: "20px",
         large: "24px",
+        medium: "18px",
         body: "16px",
         small: "14px",
       },

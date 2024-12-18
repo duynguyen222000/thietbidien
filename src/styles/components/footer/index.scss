@@ -1,2 +1,75 @@
 footer {
+  .footer-top {
+    @apply bg-bgOrange;
+    &-text {
+      @apply text-bgLight flex items-center justify-center gap-2 md:text-h3 py-2 md:py-4;
+      a {
+        @apply font-semibold;
+      }
+    }
+  }
+  .footer-bottom-layout {
+    @apply flex flex-col gap-4 md:gap-8 md:flex-row py-4;
+    .left {
+      @apply flex flex-col gap-4  basis-2/5 pb-4  md:border-r-2 md:border-solid border-darkLight;
+      .company_name {
+        @apply text-body font-semibold;
+      }
+      .contact_number {
+        @apply flex items-center gap-2;
+        &-img {
+          @apply w-10 h-10;
+        }
+        &-text {
+          p {
+            @apply text-small mb-1;
+          }
+          a {
+            @apply text-medium font-semibold;
+          }
+        }
+      }
+      .contact_address {
+      }
+      .contact_mail {
+      }
+      .contact_social {
+        @apply flex items-center gap-4;
+        &-item {
+          @apply w-10 h-10 cursor-pointer;
+        }
+      }
+    }
+    .right {
+      @apply flex flex-col gap-4 md:flex-row flex-grow justify-between;
+      .right-item {
+        @apply flex-grow;
+        .heading {
+          @apply text-medium mb-1 flex items-center justify-between;
+          svg {
+            @apply md:hidden;
+          }
+        }
+        ul {
+          @apply hidden md:block;
+
+          &.active {
+            @apply block;
+          }
+          li {
+            @apply md:hover:translate-x-2;
+            a {
+              @apply inline-flex items-center gap-2 py-2 text-small;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-company {
+    @apply border-t-[0.0625rem] border-lightDark border-solid;
+    &-text {
+      @apply text-bgDark flex items-center justify-center gap-2 text-body py-4;
+    }
+  }
 }

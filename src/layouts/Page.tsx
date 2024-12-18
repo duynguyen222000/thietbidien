@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
 interface IProps {
@@ -8,6 +9,7 @@ const LayoutPage = ({ children }: IProps) => {
     <div>
       <Header></Header>
       {children}
+      <Footer />
     </div>
   );
 };
