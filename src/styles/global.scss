@@ -5,7 +5,9 @@
 @import "./variables/index.scss";
 @import "./responsive.scss";
 @import "./components/index.scss";
-
+@import "./pages/index.scss";
+@import "swiper/css";
+@import "swiper/css/bundle";
 html,
 body {
   font-family: "Arial", "Helvetica", sans-serif;
